@@ -171,7 +171,7 @@ h1, h2, p {
 	color: white;
 }
 
-.contact button {
+button {
 	border: none;
     background-color: #C27CA7;
 	padding: 8px 15px;
@@ -190,4 +190,16 @@ input {
 
 .contact #result {
 	color: #31898F;
+}
+
+#app p {
+	text-align: center;
+	display: inline-block;
+}
+
+#app .carde {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
