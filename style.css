@@ -4,15 +4,20 @@
 	font-family: sans-serif;
 }
 
-@media screen and (max-width: 800px) {
+@media all and (max-width: 800px) {
 	.carde li {
 		font-size: 1.25rem;
-		font-weight: 600;
+		font-weight: 500;
 		line-height: 1.75rem;
 	}
 
 	.carde h2 {
-		font-weight: 600;
+		font-weight: 500;
+	}
+
+	.nav-item {
+		font-size: 1.25em !important;
+		color: white !important;
 	}
 
 }
@@ -177,6 +182,7 @@ button {
 	padding: 8px 15px;
 	border-radius: 25px;
 	margin: 15px;
+	color: white;
 }
 
 input {
