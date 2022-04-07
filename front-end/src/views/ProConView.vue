@@ -1,5 +1,5 @@
 <template>
-    <div class="stuff">
+    <div class="pro-con">
         <h1>Pros and Cons of Living Here</h1>
         <p>an abbrieviated list</p>
         
