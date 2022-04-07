@@ -5,6 +5,7 @@ import HomiesView from '../views/HomiesView.vue'
 import ProConView from '../views/ProConView.vue'
 import FavesView from '../views/FavesView.vue'
 import QuotesView from '../views/QuotesView.vue'
+import QuotesGameView from '../views/QuotesGameView.vue'
 import ContactView from '../views/ContactView.vue'
 
 Vue.use(VueRouter)
@@ -29,6 +30,11 @@ const routes = [
     path: '/faves',
     name: 'faves',
     component: FavesView
+  },
+  {
+    path: '/quotesGame',
+    name: 'quotesGame',
+    component: QuotesGameView
   },
   {
     path: '/quotes',
