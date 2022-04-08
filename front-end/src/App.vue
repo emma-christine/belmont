@@ -6,12 +6,11 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Belmont Homies</title>
     <div class="body">
       <div class="header">
-        <h1 class="site-title">Us at the Belmont</h1>
+        <h1 class="site-title"><router-link to="/">Us at the Belmont</router-link></h1>
 
         <nav class="navbar navbar-expand-lg navbar-dark">
           <button
@@ -30,7 +29,7 @@
               <router-link to="/">Home</router-link>
               <router-link to="/homies">Homies</router-link>
               <router-link to="/pro-con">Pros and Cons</router-link>
-              <router-link to="/faves">Faves</router-link>
+              <!-- <router-link to="/faves">Faves</router-link> -->
               <router-link to="/quotes">Quotes</router-link>
               <router-link to="/contact">Contact</router-link>
             </div>
@@ -156,6 +155,10 @@ p {
   text-align: left;
 }
 
+.carde ul {
+  text-align: left;
+}
+
 .pro,
 .con {
   background-color: #7cbec2;
@@ -231,6 +234,10 @@ button {
   color: white;
 }
 
+button:hover {
+    background-color: #b4719b;
+}
+
 input {
   border-radius: 5px;
   border-width: 1px;
@@ -255,4 +262,10 @@ input {
   justify-content: center;
   flex-direction: column;
 }
+
+a:hover {
+  text-decoration: none !important;
+}
+
+
 </style>

@@ -94,6 +94,14 @@ button {
     margin: 10px;
 }
 
+button a {
+    color: white;
+}
+
+button a:hover {
+    text-decoration: none;
+}
+
 .delete {
     color: #f8fffc;
     background-color: transparent;

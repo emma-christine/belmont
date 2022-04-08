@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import HomiesView from '../views/HomiesView.vue'
 import ProConView from '../views/ProConView.vue'
-import FavesView from '../views/FavesView.vue'
+// import FavesView from '../views/FavesView.vue'
 import QuotesView from '../views/QuotesView.vue'
 import QuotesGameView from '../views/QuotesGameView.vue'
 import ContactView from '../views/ContactView.vue'
@@ -26,11 +26,11 @@ const routes = [
     name: 'pro-con',
     component: ProConView
   },
-  {
-    path: '/faves',
-    name: 'faves',
-    component: FavesView
-  },
+  // {
+  //   path: '/faves',
+  //   name: 'faves',
+  //   component: FavesView
+  // },
   {
     path: '/quotesGame',
     name: 'quotesGame',
