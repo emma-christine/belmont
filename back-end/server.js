@@ -11,9 +11,10 @@ app.use(bodyParser.urlencoded({
 // parse application/json
 app.use(bodyParser.json());
 
+let emails = []
 let quotes = [{
     text: "The only boy that talks to me is the Holy Ghost",
-    author: "Emma L"
+    author: "Emma L",
 }, {
     text: "Your dog isn't cuter than mine because my dog doesn't exist and yours shouldn't either",
     author: "Emma L"
@@ -59,8 +60,12 @@ let quotes = [{
 }, {
     text: "You are just ruining my nugget experience",
     author: "Savanna"
+}, {
+    text: "You want me to throw this can of beans at you?? ...I don't even have a can of beans. I lied.",
+    author: "Paige"
 },];
 let id = 0;
+let id2 = 0;
 
 app.post('/api/quotes', (req, res) => {
     id = id + 1;
@@ -77,7 +82,7 @@ app.get('/api/quotes', (req, res) => {
     res.send(quotes);
 });
 
-app.delete('/api/:id', (req, res) => {
+app.delete('/api/quotes/:id', (req, res) => {
     let id = parseInt(req.params.id);
     let removeIndex = quotes.map(item => {
         return item.id;
@@ -89,6 +94,36 @@ app.delete('/api/:id', (req, res) => {
         return;
     }
     quotes.splice(removeIndex, 1);
+    res.sendStatus(200);
+});
+
+app.post('/api/emails', (req, res) => {
+    id2 = id2 + 1;
+    let item = {
+      id: id2,
+      name: req.body.name,
+      email: req.body.email
+    };
+    emails.push(item);
+    res.send(item);
+});
+
+app.get('/api/emails', (req, res) => {
+    res.send(emails);
+});
+
+app.delete('/api/emails/:id', (req, res) => {
+    let id = parseInt(req.params.id);
+    let removeIndex = emails.map(item => {
+        return item.id;
+    })
+        .indexOf(id);
+    if (removeIndex === -1) {
+        res.status(404)
+            .send("Sorry, that item doesn't exist");
+        return;
+    }
+    emails.splice(removeIndex, 1);
     res.sendStatus(200);
 });
 

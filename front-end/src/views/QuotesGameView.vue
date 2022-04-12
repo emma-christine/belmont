@@ -11,7 +11,7 @@
       <h2>Guess who said:</h2>
       <div class="cards-container">
         <div class="carde">
-          <p>{{ currentQuote.text }}</p>
+          <p>"{{ currentQuote.text }}"</p>
         </div>
       </div>
 
@@ -163,9 +163,5 @@ button {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-.quotesGame {
-  height: 80vh;
 }
 </style>

@@ -8,7 +8,7 @@
     />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Belmont Homies</title>
-    <div class="body">
+    <div class="page-container">
       <div class="header">
         <h1 class="site-title"><router-link to="/">Us at the Belmont</router-link></h1>
 
@@ -82,11 +82,6 @@
 
 .header {
   margin-bottom: 45px;
-}
-
-.body {
-  background-color: #e6fff7;
-  text-align: center;
 }
 
 .content h1 {
@@ -193,6 +188,8 @@ p {
   min-height: 100vh;
   top: 0;
   width: 100%;
+  background-color: #e6fff7;
+  text-align: center;
 }
 
 .content {
@@ -266,6 +263,5 @@ input {
 a:hover {
   text-decoration: none !important;
 }
-
 
 </style>

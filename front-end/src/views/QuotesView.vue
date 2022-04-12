@@ -9,7 +9,7 @@
       <div class="cards-container">
         <div v-for="quote in quotes" v-bind:key="quote.id">
           <div class="carde">
-            <p>{{ quote.text }}</p>
+            <p>"{{ quote.text }}"</p>
             <button @click="deleteQuote(quote)" class="delete">X</button>
           </div>
         </div>
@@ -73,9 +73,9 @@ export default {
         console.log(error);
       }
     },
-    async deleteItem(item) {
+    async deleteQuote(item) {
       try {
-        await axios.delete("/api/" + item.id);
+        await axios.delete("/api/quotes/" + item.id);
         this.getQuotes();
       } catch (error) {
         console.log(error);
