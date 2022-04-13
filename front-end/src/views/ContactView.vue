@@ -14,18 +14,6 @@
     <br />
     <button type="button" @click="validateEmail">Submit</button>
 
-    <br />
-    <button type="button" class="smallButton" @click="showTheEmails">
-      Show Emails
-    </button>
-
-    <div v-if="showEmails">
-      <h2>Emails:</h2>
-      <div v-for="email in emails" v-bind:key="email.id">
-        <p>{{ email.name }}, {{ email.email }}</p>
-        <button @click="deleteEmail(email)" class="delete">X</button>
-      </div>
-    </div>
   </div>
 </template>
 

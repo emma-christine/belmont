@@ -20,6 +20,7 @@ mongoose.connect('mongodb+srv://Emma89:8989456@cluster0.ihlpo.mongodb.net/belmon
     useNewUrlParser: true
 });
 
+//Quote
 const quoteSchema = new mongoose.Schema({
     text: String,
     author: String,
@@ -36,9 +37,26 @@ quoteSchema.set('toJSON', {
 
 const Quote = mongoose.model('Quote', quoteSchema);
 
-let emails = []
-let id2 = 0;
 
+//Email
+const emailSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+});
+
+emailSchema.virtual('id')
+    .get(function () {
+        return this._id.toHexString();
+    });
+
+emailSchema.set('toJSON', {
+    virtuals: true
+});
+
+const Email = mongoose.model('Email', emailSchema);
+
+
+//Quotes
 app.post('/api/quotes/file', async (req, res) => {
     try {
         await Quote.insertMany(data);
@@ -86,34 +104,43 @@ app.delete('/api/quotes/:id', async (req, res) => {
     }
 });
 
-app.post('/api/emails', (req, res) => {
-    id2 = id2 + 1;
-    let item = {
-        id: id2,
+
+//Emails
+app.post('/api/emails', async (req, res) => {
+    const email = new Email({
         name: req.body.name,
         email: req.body.email
-    };
-    emails.push(item);
-    res.send(item);
-});
-
-app.get('/api/emails', (req, res) => {
-    res.send(emails);
-});
-
-app.delete('/api/emails/:id', (req, res) => {
-    let id = parseInt(req.params.id);
-    let removeIndex = emails.map(item => {
-        return item.id;
-    })
-        .indexOf(id);
-    if (removeIndex === -1) {
-        res.status(404)
-            .send("Sorry, that item doesn't exist");
-        return;
+    });
+    try {
+        await email.save();
+        res.send(email);
+    } catch (error) {
+        console.log(error);
+        res.sendStatus(500);
     }
-    emails.splice(removeIndex, 1);
-    res.sendStatus(200);
+});
+
+
+app.get('/api/emails', async (req, res) => {
+    try {
+        let emails = await Email.find();
+        res.send(emails);
+    } catch (error) {
+        console.log(error);
+        res.sendStatus(500);
+    }
+});
+
+app.delete('/api/emails/:id', async (req, res) => {
+    try {
+        await Email.deleteOne({
+            _id: req.params.id
+        });
+        res.sendStatus(200);
+    } catch (error) {
+        console.log(error);
+        res.sendStatus(500);
+    }
 });
 
 app.listen(3000, () => console.log('Server listening on port 3000!'));
