@@ -109,4 +109,9 @@ button a:hover {
     margin: -8px 0;
     font-size: .75em;
 }
+/* 
+.footer {
+    position: static;
+    bottom: initial;
+} */
 </style>

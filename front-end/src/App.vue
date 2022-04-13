@@ -10,7 +10,9 @@
     <title>Belmont Homies</title>
     <div class="page-container">
       <div class="header">
-        <h1 class="site-title"><router-link to="/">Us at the Belmont</router-link></h1>
+        <h1 class="site-title">
+          <router-link to="/">Us at the Belmont</router-link>
+        </h1>
 
         <nav class="navbar navbar-expand-lg navbar-dark">
           <button
@@ -37,6 +39,10 @@
         </nav>
       </div>
       <router-view />
+      <div class="footer">
+        <p>Created by Emma Harrington</p>
+        <a href="https://github.com/emma-christine/creativeProject1">Github Repo</a>
+      </div>
     </div>
   </div>
 </template>
@@ -190,9 +196,6 @@ p {
   width: 100%;
   background-color: #e6fff7;
   text-align: center;
-}
-
-.content {
   padding-bottom: 60px; /* Footer height */
 }
 
@@ -232,7 +235,7 @@ button {
 }
 
 button:hover {
-    background-color: #b4719b;
+  background-color: #b4719b;
 }
 
 input {
@@ -263,5 +266,4 @@ input {
 a:hover {
   text-decoration: none !important;
 }
-
 </style>
