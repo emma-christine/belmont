@@ -41,7 +41,7 @@
       <router-view />
       <div class="footer">
         <p>Created by Emma Harrington</p>
-        <a href="https://github.com/emma-christine/creativeProject1">Github Repo</a>
+        <a href="https://github.com/emma-christine/belmont">Github Repo</a>
       </div>
     </div>
   </div>
