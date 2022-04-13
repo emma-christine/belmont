@@ -2,4 +2,4 @@
 
 This is my website about our apartment. For fun.
 
-Uses Vue CLI, Node, Express
+Uses Vue CLI, Node, Express, MongoDB
