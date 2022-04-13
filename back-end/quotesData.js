@@ -4,6 +4,10 @@ const data = [
         author: "Emma L",
         id: 1
     }, {
+        text: "You don't sing in the shower? Are you just depressed all the time??",
+        author: "Hannah",
+        id: 4
+    }, {
         text: "Your dog isn't cuter than mine because my dog doesn't exist and yours shouldn't either",
         author: "Emma L",
         id: 2
@@ -11,10 +15,6 @@ const data = [
         text: "I don't think I could ever vibe with someone that hot, it would be weird.",
         author: "Emma H",
         id: 3
-    }, {
-        text: "You don't sing in the shower? Are you just depressed all the time??",
-        author: "Hannah",
-        id: 4
     }, {
         text: "You want me to throw this can of beans at you?? ...I don't even have a can of beans. I lied.",
         author: "Paige",
@@ -40,6 +40,10 @@ const data = [
         author: "Emma L",
         id: 10
     }, {
+        text: "You are just ruining my nugget experience",
+        author: "Savanna",
+        id: 15
+    }, {
         text: "Don't kill her feelings, just maim them",
         author: "Aaron",
         id: 11
@@ -55,14 +59,6 @@ const data = [
         text: "I went on a date with a blind guy and even HE opened like 6 doors for me",
         author: "Caroline",
         id: 14
-    }, {
-        text: "There's no way in heaven or hell that I'm sharing that",
-        author: "Emma H",
-        id: 15
-    }, {
-        text: "You are just ruining my nugget experience",
-        author: "Savanna",
-        id: 16
     },
 ];
 

@@ -86,6 +86,10 @@
   text-decoration: none;
 }
 
+.site-title a:hover {
+  color: #31898f !important;
+}
+
 .header {
   margin-bottom: 45px;
 }
@@ -108,6 +112,7 @@
   justify-content: center;
   margin: 2em auto;
   background-color: #31898f;
+  box-shadow: 0 2px 8px #95c2b3;
 }
 
 .navbar a {
@@ -154,6 +159,7 @@ p {
   line-height: 25px;
   border-radius: 5px;
   text-align: left;
+  box-shadow: 0 0 10px #95c2b3;
 }
 
 .carde ul {
@@ -232,6 +238,7 @@ button {
   border-radius: 25px;
   margin: 15px;
   color: white;
+  box-shadow: 1px 1px 5px #a3b4af;
 }
 
 button:hover {
@@ -265,5 +272,8 @@ input {
 
 a:hover {
   text-decoration: none !important;
+  color: #a6d4d6 !important;
 }
+
+
 </style>

@@ -119,11 +119,6 @@ input {
   margin: 5px;
 }
 
-.smallButton {
-    background-color: transparent;
-    color: #bdffea;
-}
-
 .delete {
     color: #f8fffc;
     background-color: transparent;

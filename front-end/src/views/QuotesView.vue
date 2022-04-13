@@ -2,7 +2,7 @@
   <div class="quotes">
     <h1>Quotes</h1>
     <p>from us and our friends</p>
-    <br>
+    <br />
     <button><router-link to="/quotesGame">Play Quote Game</router-link></button>
 
     <div>
@@ -24,13 +24,11 @@
           v-model="newQuote"
         ></textarea>
         <br />
-        <input
-          id="inputAuthor"
-          v-model="newQuoter"
-          placeholder="who said it"
-        />
+        <input id="inputAuthor" v-model="newQuoter" placeholder="who said it" />
         <br />
         <button type="submit">Add Quote</button>
+        <br />
+        <button class="smallButton" @click="resetQuotes">Reset Quotes</button>
       </form>
     </div>
   </div>
@@ -81,34 +79,60 @@ export default {
         console.log(error);
       }
     },
+    async resetQuotes() {
+      try {
+        for (const quote of this.quotes) {
+            this.deleteQuote(quote);
+        }
+        await axios.post("/api/quotes/file");
+        this.getQuotes();
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 };
 </script>
 
 <style scoped>
 .carde {
-    background-color: #b5f5d5;
+  background-color: #b5f5d5;
 }
 
 button {
-    margin: 10px;
+  margin: 10px;
 }
 
 button a {
-    color: white;
+  color: white;
 }
 
 button a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .delete {
-    color: #f8fffc;
-    background-color: transparent;
-    padding: 0 5px;
-    margin: -8px 0;
-    font-size: .75em;
+  color: #f8fffc;
+  background-color: transparent;
+  padding: 0 5px;
+  margin: -8px 0;
+  font-size: 0.75em;
+  box-shadow: none;
 }
+
+.smallButton {
+  background-color: transparent;
+  color: #c27ca7;
+  font-size: 0.75em;
+  margin: 0 0;
+  padding: 0 0;
+  box-shadow: none;
+}
+
+.smallButton:hover {
+    color: #925a7d; 
+}
+
 /* 
 .footer {
     position: static;
